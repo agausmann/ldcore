@@ -14,7 +14,7 @@ use opengl_graphics::{GlGraphics, OpenGL};
 use sdl2_window::Sdl2Window;
 use window::{AdvancedWindow, Api, Position, Size, Window, WindowSettings};
 
-const OPENGL_VERSION: OpenGL = OpenGL::V2_0;
+const OPENGL_VERSION: OpenGL = OpenGL::V2_1;
 
 pub struct Context {
     events: Events,
