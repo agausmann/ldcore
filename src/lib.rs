@@ -1,4 +1,7 @@
 pub extern crate event_loop;
+pub extern crate graphics;
+pub extern crate input;
+pub extern crate window;
 
 use std::error::Error;
 use std::time::Duration;
@@ -32,6 +35,10 @@ impl Context {
                 .build()?,
             graphics: GlGraphics::new(OPENGL_VERSION),
         })
+    }
+
+    pub fn next(&mut self) -> Option<Event> {
+        self.events.next(&mut self.window)
     }
 
     pub fn draw_begin(&mut self, viewport: Viewport) -> graphics::Context {
